@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    --bryt-oranje: hsl(31, 77%, 52%);
+    --dk-cyan: hsl(184, 100%, 22%);
+    --vdk-cyan: hsl(179, 100%, 13%);
+    --para-c: hsla(0, 0%, 100%, 0.75);
+    --bg-h-btn: hsl(0, 0%, 95%);
+    --font-one: 'Big Shoulders Display', cursive;
+    --font-two: 'Lexend Deca', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 15px;
+    background: var(--bg-h-btn);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* main container styles start */
+.main-container {
+    max-width: 75%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: var(--font-two);
+    font-weight: 400;
+}
+/* main container styles end */
+
+/* sections styles start */
+section {
+    color: var(--para-c);
+    padding: 3em;
+}
+.sedans {
+    background-color: var(--bryt-oranje);
+    border-radius: 5px 0 0 5px;
+}
+section p {
+    padding-right: 0.5em;
+}
+.suvs {
+    background-color: var(--dk-cyan);
+}
+.luxury {
+    background-color: var(--vdk-cyan);
+    border-radius: 0 5px 5px 0;
+}
+section img {
+    display: block;
+    margin-bottom: 1.5em;
+}
+section h1 {
+    color: var(--bg-h-btn);
+    font-family: var(--font-one);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+}
+section button {
+    margin-top: 6em;
+    border: 2px solid var(--bg-h-btn);
+    border-radius: 30px;
+    background-color: var(--bg-h-btn);
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.sedans button {
+    color: var(--bryt-oranje);
+}
+.suvs button {
+    color: var(--dk-cyan);
+}
+.luxury button {
+    color: var(--vdk-cyan);
+}
+section button:hover {
+    /*border: 1px solid var(--bg-h-btn);*/
+    background-color: transparent;
+    color: var(--bg-h-btn);
+}
+/* sections styles end*/
+
+/* mobile layout styles start */
+@media screen and (min-width: 320px) and (max-width: 900px){
+    body {
+        height: auto;
+    }
+    .main-container {
+        max-width: 90%;
+        width: 100%;
+        grid-template-columns: 1fr;
+        margin: 100px 0;
+    }
+    .sedans {
+        border-radius: 5px 5px 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 5px 5px;
+    }
+}
+/* mobile layout styles end */
