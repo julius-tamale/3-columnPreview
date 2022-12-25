@@ -8,16 +8,22 @@
     --font-one: 'Big Shoulders Display', cursive;
     --font-two: 'Lexend Deca', sans-serif;
 }
+html, body {
+    height: 100%;
+    font-size: 16px;
+}
 * {
     margin: 0;
     padding: 0;
+}
+*, *::after, *::before {
     box-sizing: border-box;
 }
 body {
-    font-size: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
     background: var(--bg-h-btn);
     width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,14 +42,15 @@ body {
 /* sections styles start */
 section {
     color: var(--para-c);
-    padding: 3em;
+    padding: 3rem;
+    min-height: 25rem;
 }
 .sedans {
     background-color: var(--bryt-oranje);
     border-radius: 5px 0 0 5px;
 }
 section p {
-    padding-right: 0.5em;
+    padding-right: 0.5rem;
 }
 .suvs {
     background-color: var(--dk-cyan);
@@ -54,17 +61,17 @@ section p {
 }
 section img {
     display: block;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
 }
-section h1 {
+section h2 {
     color: var(--bg-h-btn);
     font-family: var(--font-one);
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
 }
 section button {
-    margin-top: 6em;
+    margin-top: 6rem;
     border: 2px solid var(--bg-h-btn);
     border-radius: 30px;
     background-color: var(--bg-h-btn);
